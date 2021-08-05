@@ -4,9 +4,11 @@ import kotlinx.coroutines.*
 
 fun main() = runBlocking {
     val job = launch(Dispatchers.Default) {
+        delay(1000)
         println("Hello from: " + Thread.currentThread().name)
         delay(1000)
     }
-    println("Done!")
+    println("Waiting for job...")
     job.join()
+    println("-----Done-----")
 }
