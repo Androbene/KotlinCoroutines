@@ -1,4 +1,4 @@
-package ua.androbene.kotlin.coroutines
+package androbene.ua.fm
 
 import kotlinx.coroutines.TimeoutCancellationException
 import kotlinx.coroutines.coroutineScope
@@ -19,7 +19,7 @@ suspend fun main() = coroutineScope {
     try {
         runWithTimeout()
     } catch (e: TimeoutCancellationException) {
-        println("TimeoutCancellationException: Время вышло, попытка не удалась.")
+        println("TimeoutCancellationException: Time is out.")
     }
 }
 
